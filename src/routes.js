@@ -3,8 +3,13 @@ const router = express.Router()
 const Question = require('./models/Question')
 
 // get all quiz questions
-router.get('/questions', (req, res) => {
-
+router.get('/questions', async (req, res) => {
+    try {
+        const questions = await Question.find()
+        return res.status(200).json(questions)
+    } catch (error) {
+        return res.status(500).json({ "error": error })
+    }
 })
 
 // get one quiz question
@@ -41,7 +46,7 @@ router.delete('/questions/:id', (req, res) => {
 
 // this one is just a test
 router.get('/', (req, res) => {
-    res.send('API is running')
+    res.send('It\'s working')
 })
 
 module.exports = router
