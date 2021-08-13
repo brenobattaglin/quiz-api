@@ -1,0 +1,490 @@
+{
+	"info": {
+		"_postman_id": "b186441a-adb1-4329-8d3e-c103d6367618",
+		"name": "quiz-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Harry Potter Questions",
+			"item": [
+				{
+					"name": "Question 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"What spell did Harry use to kill Lord Voldemort?\",\r\n    \"alternatives\": [\r\n        {\r\n            \"text\": \"Expelliarmus\",\r\n            \"isCorrect\": true\r\n        },\r\n        {\r\n            \"text\": \"Expecto Patronum\"\r\n        },\r\n        {\r\n            \"text\": \"Avada Kedavra\"\r\n        },\r\n        {\r\n            \"text\": \"Accio\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/questions",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Question 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"At the first meeting of the Duelling Club, Draco Malfoy summoned what animal with the spell ‘Serpensortia’?\",\r\n    \"alternatives\": [\r\n        {\r\n            \"text\": \"Frog\"\r\n        },\r\n        {\r\n            \"text\": \"Snake\",\r\n            \"isCorrect\": true\r\n        },\r\n        {\r\n            \"text\": \"Dragon\"\r\n        },\r\n        {\r\n            \"text\": \"Bear\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/questions",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Question 3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Which element is associated with Hufflepuff?\",\r\n    \"alternatives\": [\r\n        {\r\n            \"text\": \"Fire\"\r\n        },\r\n        {\r\n            \"text\": \"Air\"\r\n        },\r\n        {\r\n            \"text\": \"Earth\",\r\n            \"isCorrect\": true\r\n        },\r\n        {\r\n            \"text\": \"Water\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/questions",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Question 4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Who wrote the 7-book series titled ‘The Standard Book of Spells’?\",\r\n    \"alternatives\": [\r\n        {\r\n            \"text\": \"Kennilworthy Whisp\"\r\n        },\r\n        {\r\n            \"text\": \"Rita Skeeter\"\r\n        },\r\n        {\r\n            \"text\": \"Bathilda Bagshot\"\r\n        },\r\n        {\r\n            \"text\": \"Miranda Goshawk\",\r\n            \"isCorrect\": true\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/questions",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Question 5",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"‘Wit beyond measure is man’s greatest treasure’ is the motto of which house?\",\r\n    \"alternatives\": [\r\n        {\r\n            \"text\": \"Gryffindor\"\r\n        },\r\n        {\r\n            \"text\": \"Hufflepuff\"\r\n        },\r\n        {\r\n            \"text\": \"Ravenclaw\",\r\n            \"isCorrect\": true\r\n        },\r\n        {\r\n            \"text\": \"Slytherin\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/questions",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Question 6",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"What position does Harry play on his Quidditch team?\",\r\n    \"alternatives\": [\r\n        {\r\n            \"text\": \"Chaser\"\r\n        },\r\n        {\r\n            \"text\": \"Keeper\"\r\n        },\r\n        {\r\n            \"text\": \"Bludger\"\r\n        },\r\n        {\r\n            \"text\": \"Seeker\",\r\n            \"isCorrect\": true\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/questions",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Question 7",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Who knocks out the troll in the ladies’ bathroom in Harry Potter and the Philosopher’s Stone?\",\r\n    \"alternatives\": [\r\n        {\r\n            \"text\": \"Harry\"        },\r\n        {\r\n            \"text\": \"Ron\",\r\n            \"isCorrect\": true\r\n        },\r\n        {\r\n            \"text\": \"Hermione\"\r\n        },\r\n        {\r\n            \"text\": \"Snape\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/questions",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Question 8",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Who poses as Mad-Eye Moody, Harry’s 4th year Defense Against the Dark Arts professor?\",\r\n    \"alternatives\": [\r\n        {\r\n            \"text\": \"Voldemort\"\r\n        },\r\n        {\r\n            \"text\": \"Peter Pettigrew\"\r\n        },\r\n        {\r\n            \"text\": \"Barty Crouch Jr.\",\r\n            \"isCorrect\": true\r\n        },\r\n        {\r\n            \"text\": \"Sirius Black\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/questions",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Question 9",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Albus Dumbledore destroyed which Horcrux?\",\r\n    \"alternatives\": [\r\n        {\r\n            \"text\": \"Slytherin’s locket\"\r\n        },\r\n        {\r\n            \"text\": \"Nagini\"\r\n        },\r\n        {\r\n            \"text\": \"Hufflepuff’s cup\"\r\n        },\r\n        {\r\n            \"text\": \"Marvolo Gaunt’s ring\",\r\n            \"isCorrect\": true\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/questions",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Question 10",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"What magical talent does Harry share with Voldemort?\",\r\n    \"alternatives\": [\r\n        {\r\n            \"text\": \"Being an Animagus\"\r\n        },\r\n        {\r\n            \"text\": \"Being a Parselmouth\",\r\n            \"isCorrect\": true\r\n        },\r\n        {\r\n            \"text\": \"Being an Auror\"\r\n        },\r\n        {\r\n            \"text\": \"Being a Death Eater\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{server}}:{{port}}/questions",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Server Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}:{{port}}",
+					"host": [
+						"{{server}}"
+					],
+					"port": "{{port}}"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}:{{port}}/questions",
+					"host": [
+						"{{server}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Question",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}:{{port}}/questions/:id",
+					"host": [
+						"{{server}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"questions",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6115ab477304600194e35c59"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update One Question",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"What spell did Harry use to kill Lord Voldemort?\",\r\n    \"alternatives\": [\r\n        {\r\n            \"text\": \"Expelliarmus\",\r\n            \"isCorrect\": true\r\n        },\r\n        {\r\n            \"text\": \"Expecto Patronum\"\r\n        },\r\n        {\r\n            \"text\": \"Avada Kedavra\"\r\n        },\r\n        {\r\n            \"text\": \"Accio\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}:{{port}}/questions/:id",
+					"host": [
+						"{{server}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"questions",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6115ab477304600194e35c59"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete One Question",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"What spell did Harry use to kill Lord Voldemort?\",\r\n    \"alternatives\": [\r\n        {\r\n            \"text\": \"Expelliarmus\",\r\n            \"isCorrect\": true\r\n        },\r\n        {\r\n            \"text\": \"Expecto Patronum\"\r\n        },\r\n        {\r\n            \"text\": \"Avada Kedavra\"\r\n        },\r\n        {\r\n            \"text\": \"Accio\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}:{{port}}/questions/:id",
+					"host": [
+						"{{server}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"questions",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6115afac7304600194e35c8f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"What spell did Harry use to kill Lord Voldemort?\",\r\n    \"alternatives\": [\r\n        {\r\n            \"text\": \"Expelliarmus\",\r\n            \"isCorrect\": true\r\n        },\r\n        {\r\n            \"text\": \"Expecto Patronum\"\r\n        },\r\n        {\r\n            \"text\": \"Avada Kedavra\"\r\n        },\r\n        {\r\n            \"text\": \"Accio\"\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "{{server}}:{{port}}/questions",
+					"host": [
+						"{{server}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "http://localhost"
+		},
+		{
+			"key": "port",
+			"value": "3333"
+		}
+	]
+}
