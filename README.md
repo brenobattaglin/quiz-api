@@ -1,2 +1,2 @@
 # quiz-api
-API for the quiz app.
+A quiz REST API made with NodeJS.
