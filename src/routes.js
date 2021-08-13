@@ -46,8 +46,28 @@ router.post('/questions', async (req, res) => {
 })
 
 // update one quiz question
-router.put('/questions/:id', (req, res) => {
+router.put('/questions/:id', async (req, res) => {
+    try {
+        const _id = req.params.id 
+        const { description, alternatives } = req.body
 
+        let question = await Question.findOne({_id})
+
+        if(!question){
+            question = await Question.create({
+                description,
+                alternatives
+            })    
+            return res.status(201).json(question)
+        }else{
+            question.description = description
+            question.alternatives = alternatives
+            await question.save()
+            return res.status(200).json(question)
+        }
+    } catch (error) {
+        return res.status(500).json({"error":error})
+    }
 })
 
 // delete one quiz question
