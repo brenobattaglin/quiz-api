@@ -1,5 +1,5 @@
 # quiz-api
-A quiz REST API made with NodeJS and MongoDB Atlas.
+A quiz REST API made using NodeJS and MongoDB.
 
 ## Getting started
 Create a **.env** file in the root directory with the following content, pasting your MongoDB connection string:
