@@ -1,15 +1,23 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { CreateQuestionDto } from './dto/create-question.dto';
 import { UpdateQuestionDto } from './dto/update-question.dto';
+import { Model } from 'mongoose';
+import Question from './interfaces/question.interface';
 
 @Injectable()
 export class QuestionsService {
+  constructor(
+    @Inject(questionModel)
+    private questionModel: Model<Question>,
+  ) {}
+
   create(createQuestionDto: CreateQuestionDto) {
-    return 'This action adds a new question';
+    const createdQuestion = new this.questionModel(createQuestionDto);
+    return createdQuestion.save();
   }
 
-  findAll() {
-    return `This action returns all questions`;
+  async findAll(): Promise<Question[]> {
+    return this.questionModel.find().exec();
   }
 
   findOne(id: number) {
