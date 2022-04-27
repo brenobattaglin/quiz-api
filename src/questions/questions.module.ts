@@ -1,12 +1,14 @@
 import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
 import { QuestionsService } from './questions.service';
 import { QuestionsController } from './questions.controller';
-import { DatabaseModule } from 'src/database/database.module';
-import { questionProviders } from './questions.provider';
+import { QuestionSchema } from './schemas/question.schema';
 
 @Module({
-  imports: [DatabaseModule],
+  imports: [
+    MongooseModule.forFeature([{ name: 'Question', schema: QuestionSchema }]),
+  ],
   controllers: [QuestionsController],
-  providers: [QuestionsService, ...questionProviders],
+  providers: [QuestionsService],
 })
 export class QuestionsModule {}
