@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b186441a-adb1-4329-8d3e-c103d6367618",
+		"_postman_id": "f9462317-e4e0-4def-a665-326e08e34476",
 		"name": "quiz-api",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -471,11 +471,11 @@
 	"variable": [
 		{
 			"key": "server",
-			"value": "{{host}}"
+			"value": "http://localhost"
 		},
 		{
 			"key": "port",
-			"value": "{{port3333}}"
+			"value": "3333"
 		}
 	]
 }
