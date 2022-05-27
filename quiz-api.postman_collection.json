@@ -399,15 +399,6 @@
 						"type": "text"
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"description\": \"What spell did Harry use to kill Lord Voldemort?\",\r\n    \"alternatives\": [\r\n        {\r\n            \"text\": \"Expelliarmus\",\r\n            \"isCorrect\": true\r\n        },\r\n        {\r\n            \"text\": \"Expecto Patronum\"\r\n        },\r\n        {\r\n            \"text\": \"Avada Kedavra\"\r\n        },\r\n        {\r\n            \"text\": \"Accio\"\r\n        }\r\n    ]\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
 					"raw": "{{server}}:{{port}}/questions/:id",
 					"host": [
@@ -480,11 +471,11 @@
 	"variable": [
 		{
 			"key": "server",
-			"value": "http://localhost"
+			"value": "{{host}}"
 		},
 		{
 			"key": "port",
-			"value": "3333"
+			"value": "{{port3333}}"
 		}
 	]
 }
