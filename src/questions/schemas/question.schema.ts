@@ -13,7 +13,7 @@ export class Question {
   description: string;
 
   @Prop([Answer])
-  options: Answer[];
+  alternatives: Answer[];
 }
 
 export const QuestionSchema = SchemaFactory.createForClass(Question);
