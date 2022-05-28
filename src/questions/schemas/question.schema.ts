@@ -1,19 +1,7 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
-import { Answer } from '../models/answer.model';
+import * as mongoose from 'mongoose';
+import { AnswerSchema } from './answer.schema';
 
-export type QuestionDocument = Question & Document;
-
-@Schema()
-export class Question {
-  @Prop()
-  id: number;
-
-  @Prop()
-  description: string;
-
-  @Prop([Answer])
-  alternatives: Answer[];
-}
-
-export const QuestionSchema = SchemaFactory.createForClass(Question);
+export const QuestionSchema = new mongoose.Schema({
+  description: String,
+  alternatives: [AnswerSchema],
+});
