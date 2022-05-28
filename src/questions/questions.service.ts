@@ -21,12 +21,15 @@ export class QuestionsService {
   }
 
   async findOne(id: number) {
-    return `This action returns a #${id} question`;
+    try {
+      const question = await this.questionModel.findById(id).exec();
+      return question;
+    } catch (error) {
+      return error;
+    }
   }
 
   async update(id: number, updateQuestionDto: UpdateQuestionDto) {
-    console.log(updateQuestionDto);
-
     return `This action updates a #${id} question`;
   }
 

@@ -26,8 +26,9 @@ export class QuestionsController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.questionsService.findOne(+id);
+  findOne(@Param('id') id: number) {
+    const question = this.questionsService.findOne(id);
+    return question;
   }
 
   @Patch(':id')
