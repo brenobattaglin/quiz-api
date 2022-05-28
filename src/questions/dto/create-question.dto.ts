@@ -1,9 +1,6 @@
+import Answer from '../interfaces/answer.interface';
+
 export class CreateQuestionDto {
   description: string;
-  alternatives: [
-    {
-      text: string;
-      isCorrect: boolean;
-    },
-  ];
+  alternatives: [Answer];
 }
