@@ -1,14 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { CreateQuestionDto } from './dto/create-question.dto';
 import { UpdateQuestionDto } from './dto/update-question.dto';
+import Question from './interfaces/question.interface';
 import { Model, Types } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
-import { Question, QuestionDocument } from './schemas/question.schema';
 
 @Injectable()
 export class QuestionsService {
   constructor(
-    @InjectModel('Question') private questionModel: Model<QuestionDocument>,
+    @InjectModel('Question') private questionModel: Model<Question>,
   ) {}
 
   async create(createQuestionDto: CreateQuestionDto) {
@@ -32,11 +32,11 @@ export class QuestionsService {
 
   async remove(id: number) {
     try {
-      this.questionModel.findByIdAndDelete(new Types.ObjectId(id)).exec();
+      await this.questionModel.findByIdAndDelete(new Types.ObjectId(id)).exec();
       return { message: 'Question deleted.' };
     } catch (error) {
       return {
-        message: "It wasn't possible to delete the question",
+        message: error.message,
       };
     }
   }
