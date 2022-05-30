@@ -6,10 +6,13 @@ import {
   Patch,
   Param,
   Delete,
+  HttpException,
+  HttpStatus,
 } from '@nestjs/common';
 import { QuestionsService } from './questions.service';
 import { CreateQuestionDto } from './dto/create-question.dto';
 import { UpdateQuestionDto } from './dto/update-question.dto';
+import { Types } from 'mongoose';
 
 @Controller('questions')
 export class QuestionsController {
@@ -26,9 +29,25 @@ export class QuestionsController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: number) {
-    const question = this.questionsService.findOne(id);
-    return question;
+  async findOne(@Param('id') id: number) {
+    try {
+      if (!Types.ObjectId.isValid(id)) {
+        throw new HttpException('Invalid object id', HttpStatus.BAD_REQUEST);
+      }
+
+      const question = await this.questionsService.findOne(id);
+
+      if (!question) {
+        throw new HttpException(
+          'No question found with this id.',
+          HttpStatus.NOT_FOUND,
+        );
+      }
+
+      return question;
+    } catch (error) {
+      throw error;
+    }
   }
 
   @Patch(':id')

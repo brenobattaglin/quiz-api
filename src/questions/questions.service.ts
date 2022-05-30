@@ -25,7 +25,7 @@ export class QuestionsService {
       const question = await this.questionModel.findById(id).exec();
       return question;
     } catch (error) {
-      return error;
+      throw error;
     }
   }
 
