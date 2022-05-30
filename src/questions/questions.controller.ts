@@ -41,16 +41,13 @@ export class QuestionsController {
   async findOne(@Param('id') id: number) {
     try {
       if (!Types.ObjectId.isValid(id)) {
-        throw new HttpException('Invalid object id', HttpStatus.BAD_REQUEST);
+        throw new BadRequestException('Invalid object id');
       }
 
       const question = await this.questionsService.findOne(id);
 
       if (!question) {
-        throw new HttpException(
-          'No question found with this id.',
-          HttpStatus.NOT_FOUND,
-        );
+        throw new NotFoundException('No question found with this id.');
       }
 
       return question;

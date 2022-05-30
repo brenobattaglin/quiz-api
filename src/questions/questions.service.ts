@@ -21,12 +21,7 @@ export class QuestionsService {
   }
 
   async findOne(id: number) {
-    try {
-      const question = await this.questionModel.findById(id).exec();
-      return question;
-    } catch (error) {
-      throw error;
-    }
+    return this.questionModel.findById(id).exec();
   }
 
   async update(id: number, updateQuestionDto: UpdateQuestionDto) {
