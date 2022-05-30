@@ -6,8 +6,8 @@ import {
   Patch,
   Param,
   Delete,
-  HttpException,
-  HttpStatus,
+  NotFoundException,
+  BadRequestException,
 } from '@nestjs/common';
 import { QuestionsService } from './questions.service';
 import { CreateQuestionDto } from './dto/create-question.dto';
@@ -24,8 +24,17 @@ export class QuestionsController {
   }
 
   @Get()
-  findAll() {
-    return this.questionsService.findAll();
+  async findAll() {
+    try {
+      const questions = await this.questionsService.findAll();
+      if (!questions || questions.length === 0) {
+        throw new NotFoundException('No questions found on the database.');
+      }
+
+      return questions;
+    } catch (error) {
+      throw error;
+    }
   }
 
   @Get(':id')

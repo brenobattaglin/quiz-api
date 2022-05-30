@@ -16,7 +16,7 @@ export class QuestionsService {
     return createdQuestion.save();
   }
 
-  async findAll(): Promise<Question[]> {
+  async findAll() {
     return this.questionModel.find().exec();
   }
 
