@@ -20,7 +20,11 @@ export class QuestionsController {
 
   @Post()
   create(@Body() createQuestionDto: CreateQuestionDto) {
-    return this.questionsService.create(createQuestionDto);
+    try {
+      return this.questionsService.create(createQuestionDto);
+    } catch (error) {
+      throw error;
+    }
   }
 
   @Get()
