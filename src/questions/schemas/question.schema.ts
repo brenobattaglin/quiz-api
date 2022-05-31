@@ -1,7 +1,12 @@
 import * as mongoose from 'mongoose';
-import { AnswerSchema } from './answer.schema';
+
+const Answer = new mongoose.Schema({
+  id: Number,
+  text: String,
+  isCorrect: Boolean,
+});
 
 export const QuestionSchema = new mongoose.Schema({
   description: String,
-  alternatives: [AnswerSchema],
+  alternatives: [Answer],
 });
