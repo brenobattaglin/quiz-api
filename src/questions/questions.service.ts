@@ -24,8 +24,15 @@ export class QuestionsService {
     return this.questionModel.findById(id).exec();
   }
 
-  async update(id: number, updateQuestionDto: UpdateQuestionDto) {
-    return `This action updates a #${id} question`;
+  async update(id: number, updateQuestionDto: QuestionDto) {
+    try {
+      await this.questionModel.updateOne({ _id: id }, updateQuestionDto).exec();
+      return { message: 'Question updated.' };
+    } catch (error) {
+      return {
+        message: error.message,
+      };
+    }
   }
 
   async remove(id: number) {

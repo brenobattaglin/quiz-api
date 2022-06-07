@@ -61,11 +61,12 @@ export class QuestionsController {
   }
 
   @Patch(':id')
-  update(
-    @Param('id') id: string,
-    @Body() updateQuestionDto: UpdateQuestionDto,
-  ) {
-    return this.questionsService.update(+id, updateQuestionDto);
+  update(@Param('id') id: number, @Body() questionDto: QuestionDto) {
+    try {
+      return this.questionsService.update(id, questionDto);
+    } catch (error) {
+      throw error;
+    }
   }
 
   @Delete(':id')
