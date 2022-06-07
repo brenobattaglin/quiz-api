@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { CreateQuestionDto } from './dto/create-question.dto';
-import { UpdateQuestionDto } from './dto/update-question.dto';
+import { QuestionDto } from './dto/question.dto';
 import Question from './interfaces/question.interface';
 import { Model, Types } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
@@ -11,7 +10,7 @@ export class QuestionsService {
     @InjectModel('Question') private questionModel: Model<Question>,
   ) {}
 
-  async create(createQuestionDto: CreateQuestionDto) {
+  async create(createQuestionDto: QuestionDto) {
     const createdQuestion = new this.questionModel(createQuestionDto);
     return createdQuestion.save();
   }

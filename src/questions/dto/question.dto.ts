@@ -8,7 +8,7 @@ import {
 } from 'class-validator';
 import { AnswerDto } from './answer.dto';
 
-export class CreateQuestionDto {
+export class QuestionDto {
   @IsString()
   @IsNotEmpty()
   readonly description: string;

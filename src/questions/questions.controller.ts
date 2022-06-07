@@ -10,18 +10,17 @@ import {
   BadRequestException,
 } from '@nestjs/common';
 import { QuestionsService } from './questions.service';
-import { CreateQuestionDto } from './dto/create-question.dto';
-import { UpdateQuestionDto } from './dto/update-question.dto';
 import { Types } from 'mongoose';
+import { QuestionDto } from './dto/question.dto';
 
 @Controller('questions')
 export class QuestionsController {
   constructor(private readonly questionsService: QuestionsService) {}
 
   @Post()
-  create(@Body() createQuestionDto: CreateQuestionDto) {
+  create(@Body() questionDto: QuestionDto) {
     try {
-      return this.questionsService.create(createQuestionDto);
+      return this.questionsService.create(questionDto);
     } catch (error) {
       throw error;
     }
