@@ -4,7 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://localhost/nest'),
+    MongooseModule.forRoot('mongodb+srv://localhost/nest', { dbName: 'quiz' }),
     QuestionsModule,
   ],
 })
