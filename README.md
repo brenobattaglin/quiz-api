@@ -2,7 +2,7 @@
 
 ## Description
 
-A quiz API made using NodeJS and MongoDB.
+A quiz API made with NestJS that uses MongoDB.
 
 ## Installation
 
@@ -11,6 +11,8 @@ $ npm install
 ```
 
 ## Running the app
+
+Update the _src/app.module.ts_ with the MongoDB connection string, then run one of the following commands
 
 ```bash
 # development
