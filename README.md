@@ -1,19 +1,39 @@
 # quiz-api
 
-A quiz REST API made using NodeJS and MongoDB.
+## Description
 
-## Getting started
+A quiz API made with NestJS that uses MongoDB.
 
-Update the **DATABASE_URL** in the **.env** file, located on the root directory, pasting your MongoDB connection string, for instance:
+## Installation
 
-    DATABASE_URL=mongodb://xxxxxx/xxxxx
+```bash
+$ npm install
+```
 
-Install npm modules and dependencies:
+## Running the app
 
-    npm install
+Update the _src/app.module.ts_ with the MongoDB connection string, then run one of the following commands
 
-## Starting the server
+```bash
+# development
+$ npm run start
 
-To start the server, just run:
+# watch mode
+$ npm run start:dev
 
-    npm run dev
+# production mode
+$ npm run start:prod
+```
+
+## Test
+
+```bash
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov
+```
